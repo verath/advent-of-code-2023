@@ -12,7 +12,7 @@ def main() -> None:
             mod = importlib.import_module(f"aoc2023.{mod_name}")
             print(f"# {mod_name}")
             mod.main()
-        except ModuleNotFoundError:
+        except (ModuleNotFoundError, NotImplementedError):
             pass
 
 
